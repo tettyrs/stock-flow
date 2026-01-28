@@ -100,6 +100,7 @@ Run tests with H2 in-memory database:
 
 ## API Testing
 Import `postman_collection.json` into Postman or Insomnia to test all endpoints.
+- **Collection Variable**: `baseUrl` is set to `http://localhost:8080` by default. You can change this if your application runs on a different port or host.
 
 ## Logging
    

@@ -4,6 +4,13 @@
         "description": "API Collection for StockFlow Service",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:8080",
+            "type": "string"
+        }
+    ],
     "item": [
         {
             "name": "1. Create Item (Pen)",
@@ -20,12 +27,10 @@
                     "raw": "{\n\t\"name\": \"Pen\",\n\t\"price\": 5.0\n}"
                 },
                 "url": {
-                    "raw": "http://localhost:8080/api/items",
-                    "protocol": "http",
+                    "raw": "{{baseUrl}}/api/items",
                     "host": [
-                        "localhost"
+                        "{{baseUrl}}"
                     ],
-                    "port": "8080",
                     "path": [
                         "api",
                         "items"
@@ -40,12 +45,10 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                    "raw": "http://localhost:8080/api/items",
-                    "protocol": "http",
+                    "raw": "{{baseUrl}}/api/items",
                     "host": [
-                        "localhost"
+                        "{{baseUrl}}"
                     ],
-                    "port": "8080",
                     "path": [
                         "api",
                         "items"
@@ -69,12 +72,10 @@
                     "raw": "{\n\t\"itemId\": 1,\n\t\"qty\": 10,\n\t\"type\": \"T\"\n}"
                 },
                 "url": {
-                    "raw": "http://localhost:8080/api/inventory",
-                    "protocol": "http",
+                    "raw": "{{baseUrl}}/api/inventory",
                     "host": [
-                        "localhost"
+                        "{{baseUrl}}"
                     ],
-                    "port": "8080",
                     "path": [
                         "api",
                         "inventory"
@@ -98,12 +99,10 @@
                     "raw": "{\n\t\"orderNo\": \"O001\",\n\t\"itemId\": 1,\n\t\"qty\": 5,\n\t\"price\": 5.0\n}"
                 },
                 "url": {
-                    "raw": "http://localhost:8080/api/orders",
-                    "protocol": "http",
+                    "raw": "{{baseUrl}}/api/orders",
                     "host": [
-                        "localhost"
+                        "{{baseUrl}}"
                     ],
-                    "port": "8080",
                     "path": [
                         "api",
                         "orders"
@@ -127,12 +126,10 @@
                     "raw": "{\n\t\"orderNo\": \"O002\",\n\t\"itemId\": 1,\n\t\"qty\": 6,\n\t\"price\": 5.0\n}"
                 },
                 "url": {
-                    "raw": "http://localhost:8080/api/orders",
-                    "protocol": "http",
+                    "raw": "{{baseUrl}}/api/orders",
                     "host": [
-                        "localhost"
+                        "{{baseUrl}}"
                     ],
-                    "port": "8080",
                     "path": [
                         "api",
                         "orders"
