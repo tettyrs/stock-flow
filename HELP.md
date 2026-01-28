@@ -33,3 +33,7 @@ You can run the tests using the following command:
 ```bash
 ./mvnw test
 ```
+
+## API Testing
+You can import `postman_collection.json` into Postman/Insomnia.
+- Set the `baseUrl` variable to `http://localhost:8080`.
