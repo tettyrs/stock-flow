@@ -1,178 +1,145 @@
 {
-    "_type": "export",
-    "__export_format": 4,
-    "__export_date": "2024-05-22T10:00:00.000Z",
-    "__export_source": "StockFlow",
-    "resources": [
+    "info": {
+        "name": "StockFlow API",
+        "description": "API Collection for StockFlow Service",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
         {
-            "_id": "req_create_item",
-            "parentId": "wrk_1",
-            "modified": 1700000000000,
-            "created": 1700000000000,
-            "url": "http://localhost:8080/api/items",
             "name": "1. Create Item (Pen)",
-            "description": "",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/json",
-                "text": "{\n\t\"name\": \"Pen\",\n\t\"price\": 5.0\n}"
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "name": "Content-Type",
-                    "value": "application/json"
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"name\": \"Pen\",\n\t\"price\": 5.0\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/items",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "items"
+                    ]
                 }
-            ],
-            "authentication": {},
-            "metaSortKey": -1700000000000,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
+            },
+            "response": []
         },
         {
-            "_id": "req_get_items",
-            "parentId": "wrk_1",
-            "modified": 1700000000100,
-            "created": 1700000000100,
-            "url": "http://localhost:8080/api/items",
             "name": "2. Get All Items",
-            "description": "",
-            "method": "GET",
-            "body": {},
-            "parameters": [],
-            "headers": [],
-            "authentication": {},
-            "metaSortKey": -1699999999900,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/items",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "items"
+                    ]
+                }
+            },
+            "response": []
         },
         {
-            "_id": "req_add_inventory",
-            "parentId": "wrk_1",
-            "modified": 1700000000200,
-            "created": 1700000000200,
-            "url": "http://localhost:8080/api/inventory",
             "name": "3. Add Inventory (TopUp)",
-            "description": "",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/json",
-                "text": "{\n\t\"itemId\": 1,\n\t\"qty\": 10,\n\t\"type\": \"T\"\n}"
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "name": "Content-Type",
-                    "value": "application/json"
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"itemId\": 1,\n\t\"qty\": 10,\n\t\"type\": \"T\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/inventory",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "inventory"
+                    ]
                 }
-            ],
-            "authentication": {},
-            "metaSortKey": -1699999999800,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
+            },
+            "response": []
         },
         {
-            "_id": "req_place_order",
-            "parentId": "wrk_1",
-            "modified": 1700000000300,
-            "created": 1700000000300,
-            "url": "http://localhost:8080/api/orders",
             "name": "4. Place Order (Success)",
-            "description": "",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/json",
-                "text": "{\n\t\"orderNo\": \"O001\",\n\t\"itemId\": 1,\n\t\"qty\": 5,\n\t\"price\": 5.0\n}"
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "name": "Content-Type",
-                    "value": "application/json"
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"orderNo\": \"O001\",\n\t\"itemId\": 1,\n\t\"qty\": 5,\n\t\"price\": 5.0\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/orders",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders"
+                    ]
                 }
-            ],
-            "authentication": {},
-            "metaSortKey": -1699999999700,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
+            },
+            "response": []
         },
         {
-            "_id": "req_place_order_fail",
-            "parentId": "wrk_1",
-            "modified": 1700000000400,
-            "created": 1700000000400,
-            "url": "http://localhost:8080/api/orders",
             "name": "5. Place Order (Insufficient Stock)",
-            "description": "",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/json",
-                "text": "{\n\t\"orderNo\": \"O002\",\n\t\"itemId\": 1,\n\t\"qty\": 6,\n\t\"price\": 5.0\n}"
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "name": "Content-Type",
-                    "value": "application/json"
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n\t\"orderNo\": \"O002\",\n\t\"itemId\": 1,\n\t\"qty\": 6,\n\t\"price\": 5.0\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/orders",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "orders"
+                    ]
                 }
-            ],
-            "authentication": {},
-            "metaSortKey": -1699999999600,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "wrk_1",
-            "parentId": null,
-            "modified": 1700000000000,
-            "created": 1700000000000,
-            "name": "StockFlow API",
-            "description": "",
-            "scope": "collection",
-            "_type": "workspace"
-        },
-        {
-            "_id": "env_1",
-            "parentId": "wrk_1",
-            "modified": 1700000000000,
-            "created": 1700000000000,
-            "name": "Base Environment",
-            "data": {},
-            "dataPropertyOrder": null,
-            "color": null,
-            "isPrivate": false,
-            "metaSortKey": 1700000000000,
-            "_type": "environment"
+            },
+            "response": []
         }
     ]
 }
